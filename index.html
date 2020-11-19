@@ -14,16 +14,16 @@
         <img id="sky" src="https://Josh-Elliott.github.io/low-poly-vr/vr_assets/clear_sky.png" crossorigin="anonymous"/>
       </a-assets>
 
-      <a-entity
-        camera=""
-        position=" 2 0.19 0"
-        wasd-controls=""
-        rotation=""
-        look-controls=""
-        aframe-injected=""
-        data-aframe-inspector-original-camera=""
-        id="camera"
-      ></a-entity>
+     <a-sky
+        id="background"
+        src="#sky"
+        theta-length="90"
+        radius="30"
+        position="0 -54.59172 0"
+        material=""
+        geometry=""
+        scale="-2 2 2"
+      ></a-sky>
 
       <a-gltf-model src="https://Josh-Elliott.github.io/low-poly-vr/vr_assets/mountains.glb" 
               gltf-model="https://Josh-Elliott.github.io/low-poly-vr/vr_assets/mountains.glb" rotation="0 -30 0">
@@ -37,10 +37,9 @@
               gltf-model="https://Josh-Elliott.github.io/low-poly-vr/vr_assets/mountains.glb">
            </a-gltf-model>
       
-      
-        <a-entity
+      <a-entity
         camera=""
-        position="0 1 0"
+        position=" 2 0.19 0"
         wasd-controls=""
         rotation=""
         look-controls=""
@@ -48,6 +47,7 @@
         data-aframe-inspector-original-camera=""
         id="camera"
       ></a-entity>
+      
 
     </a-scene>
   </body>
