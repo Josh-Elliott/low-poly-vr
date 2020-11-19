@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>first vr environment</title>
   </head>
-  
-  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-    <script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
 
-    <body>
-    
-      <a-scene>
-      
-        <a-assets>
-            <img id="skyLeaves" src="https://Josh-Elliott.github.io/aframe-environment/assets/autumn_forest_02.jpg" crossorigin="anonymous">
-            <img id="floorLeaves" src="https://Josh-Elliott.github.io/aframe-environment/assets/floor_leaves.jpg" crossorigin="anonymous">
-            <img id="wiki" src="https://Josh-Elliott.github.io/aframe-environment/assets/wik_forest.jpg" crossorigin="anonymous">
-        </a-assets>
+  <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+  <script src="https://rawgit.com/Ctrl-Alt-Zen/aframe-mobile-controls/master/components/twoway-motion/twoway-motion.js"></script>
+
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="sky" src="https://Josh-Elliott.github.io/low-poly-vr/vr_assets/clear_sky.hdr" crossorigin="anonymous"/>
+      </a-assets>
+
+      <a-sky
+        id="background"
+        src="#sky"
+        theta-length="90"
+        radius="30"
+        position="0 -25.55254 0"
+        material=""
+        geometry=""
+        scale="-2 2 2"
+      ></a-sky>
+
+      <a-gltf-model
+        src="https://Josh-Elliott.github.io/low-poly-vr/vr_assets/mountains.glb">
         
-       
-       <a-sky id="background" src="#skyLeaves" theta-length="90" radius="30" position="0 -25.55254 0" material="" geometry="" scale="-2 2 2"></a-sky>
-        
-       <a-entity id="ground" geometry="primitive: cylinder" scale="50 1 50" material="color: #cabfbf; src: #floorLeaves"></a-entity>
-        
-        
-        <a-entity camera="" position="0 9 0" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" id="camera"></a-entity>
-        
-       <a-curvedimage src="#wiki" radius="5.7" theta-length="180" height="9" position="0 8.3 14.9" rotation="0 -90 0" scale="0.48 0.88 0.62" material="" geometry="height: 8.33; radius: 9.09; thetaLength: 160" id="forestInfo"></a-curvedimage>
-        
-      </a-scene>
-      
-     </body>
-     
+
+      <a-entity camera="" position="0 9 0" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" id="camera"></a-entity>
+
+    </a-scene>
+  </body>
 </html>
+
+     
+
